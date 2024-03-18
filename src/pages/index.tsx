@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useEffect, useRef } from "react";
 import anime from "animejs";
 
-import ExpandImg from "@/assets/images/symbols/expand.svg";
+// import ExpandImg from "@/assets/images/symbols/expand.svg";
 
 const LogoAnimation = () => {
   const svgEl = useRef<SVGSVGElement>(null);
