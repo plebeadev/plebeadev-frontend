@@ -23,10 +23,8 @@ const LogoAnimation = () => {
 
   return (
     <>
-      <svg
+      <ResponsiveSvg
         ref={svgEl}
-        width="411"
-        height="334"
         viewBox="0 0 411 334"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -41,10 +39,20 @@ const LogoAnimation = () => {
           stroke="white"
           stroke-width="3"
         />
-      </svg>
+      </ResponsiveSvg>
     </>
   );
 };
+
+const ResponsiveSvg = styled.svg`
+  width: 411px;
+  height: 334px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
+`;
 
 const Index = () => {
   return (
@@ -54,7 +62,7 @@ const Index = () => {
           <LogoAnimation />
         </LogoWrapper>
 
-        <DownArrow src={ExpandImg} alt="화살표" />
+        {/* <DownArrow src={ExpandImg} alt="화살표" /> */}
       </Wrapper>
     </>
   );
@@ -75,12 +83,12 @@ const LogoWrapper = styled.div`
   position: relative;
 `;
 
-const DownArrow = styled.img`
-  position: absolute;
+// const DownArrow = styled.img`
+//   position: absolute;
 
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-`;
+//   bottom: 20px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// `;
 
 export default Index;
